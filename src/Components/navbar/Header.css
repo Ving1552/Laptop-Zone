@@ -1,0 +1,21 @@
+a {
+    color: rgb(177, 177, 177);
+}
+
+a:active {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.user-img {
+    border-radius: 50%;
+    height: 40px;
+}
+
+.nav-elements {
+    margin-left: auto;
+}

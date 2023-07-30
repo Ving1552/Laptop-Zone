@@ -1,0 +1,37 @@
+/* Footer.css */
+.footer-middle {
+  background: rgb(59, 59, 59);
+  padding-top: 2rem;
+  color: white;
+}
+
+.footer-content-left {
+  margin-left: 4rem; 
+}
+
+.footer-content-right {
+  margin-right: 5.8rem; 
+}
+
+.footer-bottom {
+  padding-bottom: 1rem;
+  color: rgb(136, 136, 136);
+}
+
+.social-media-names {
+  color: rgb(160, 160, 160);
+}
+
+.social-media-names:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.contact-us {
+  color: rgb(160, 160, 160);
+}
+
+.contact-us:hover {
+  color: white;
+  cursor: pointer;
+}

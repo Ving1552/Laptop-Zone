@@ -1,0 +1,20 @@
+.app-container {
+    min-height: 100vh; /* Set the minimum height of the container to fill the viewport */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links {
+    color: rgb(174, 174, 174);
+    cursor: pointer;
+  }
+
+  .links:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .links:active {
+    color: white;
+    cursor: pointer;
+  }
