@@ -8,6 +8,7 @@ var cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const multer = require('multer');
 require("dotenv").config();
+const verifyToken = require('./middlewares/verifyToken');
 
 //configure cloudinary
 cloudinary.config({
@@ -85,7 +86,7 @@ userApp.post('/login', expressAsyncHandler(async (req, res) => {
         }
         else {
             //we have to create json web token for valid user
-            let token = jwt.sign({ username: userofDB.username }, process.env.SECRET_KEY, { expiresIn: 60 });
+            let token = jwt.sign({ username: userofDB.username }, process.env.SECRET_KEY, { expiresIn: 10 });
 
             res.send({ message: 'success', payload: token, userObj: userofDB });
         }
@@ -93,7 +94,7 @@ userApp.post('/login', expressAsyncHandler(async (req, res) => {
 
 }));
 
-userApp.get('/getusers', expressAsyncHandler(async (req, res) => {
+userApp.get('/getusers', verifyToken, expressAsyncHandler(async (req, res) => {
     let userCollectionObject = req.app.get('userCollectionObj');
     let users = await userCollectionObject.find().toArray();
 
@@ -132,5 +133,10 @@ userApp.delete('/deleteusers/:username', expressAsyncHandler(async (req, res) =>
         res.send({ message: 'Deleted Successfully' });
     }
 }));
+
+//private routes demo
+userApp.get('/test',verifyToken,(req, res) => {
+    res.send({ message: 'Testing private route'});
+});
 
 module.exports = userApp;

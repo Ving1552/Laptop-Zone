@@ -5,7 +5,6 @@ import axios from 'axios';
 export const userLogin = createAsyncThunk('loginuser', async(userCredentialObj,thunkApi)=>{
     let response = await axios.post('http://localhost:4000/user/login',userCredentialObj);
     let data = response.data;
-    console.log(data);
     if(data.message === 'success') {
         //store token in local storage
         localStorage.setItem("token",data.payload);
