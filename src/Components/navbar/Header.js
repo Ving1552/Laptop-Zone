@@ -41,7 +41,7 @@ function Header() {
                 <NavLink className='nav-link' to="/" >Home</NavLink>
                 <NavLink className='nav-link' to="/signup">Signup</NavLink>
                 <NavLink className='nav-link' to="/login">Login</NavLink>
-                <NavLink className='nav-link' to="/contactus">Explore</NavLink>
+                <NavLink className='nav-link' to="/explore">Explore</NavLink>
               </>
             ) : (
 
@@ -65,7 +65,7 @@ function Header() {
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/contactus' element={<Explore />} />
+        <Route path='/explore' element={<Explore />} />
         <Route path='/userdashboard' element={<Userdashboard />} >
           <Route path="profile" element={<Userprofile />} />
           <Route path="cart" element={<Cart />} />

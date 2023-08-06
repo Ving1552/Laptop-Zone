@@ -86,7 +86,7 @@ userApp.post('/login', expressAsyncHandler(async (req, res) => {
         }
         else {
             //we have to create json web token for valid user
-            let token = jwt.sign({ username: userofDB.username }, process.env.SECRET_KEY, { expiresIn: 10 });
+            let token = jwt.sign({ username: userofDB.username }, process.env.SECRET_KEY, { expiresIn: 100 });
 
             res.send({ message: 'success', payload: token, userObj: userofDB });
         }

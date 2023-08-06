@@ -10,7 +10,7 @@ productApp.get('/getproducts', expressAsyncHandler(async (req, res) => {
     let productCollectionObject = req.app.get('productCollectionObj');
     let products = await productCollectionObject.find().toArray();
 
-    res.send({ message: 'All users', payload: products });
+    res.send({ message: 'All products', payload: products });
 }))
 
 productApp.put('/putproducts/:id', expressAsyncHandler(async (req, res) => {

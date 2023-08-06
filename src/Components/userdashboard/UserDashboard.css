@@ -6,3 +6,9 @@
 .username {
     font-weight: bolder;
 }
+
+Nav.Link:focus {
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+}

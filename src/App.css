@@ -18,3 +18,30 @@
     color: white;
     cursor: pointer;
   }
+
+  /* Add your custom styles here */
+.explore-page {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style the carousel caption */
+.legend {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .explore-page {
+    padding: 10px;
+  }
+
+  /* Adjust image size for smaller screens */
+  .carousel .slide img {
+    max-width: 100%;
+    height: auto;
+  }
+}

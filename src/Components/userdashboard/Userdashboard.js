@@ -11,15 +11,15 @@ function Userdashboard() {
         <>
             <Nav className="justify-content-center mt-3" defaultActiveKey = "/profile">
                     <Nav.Item>
-                        <Nav.Link to="profile" as={NavLink}>User Profile</Nav.Link>
+                        <Nav.Link to="profile" as={NavLink} className="udlinks">User Profile</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link to="cart" as={NavLink}>
+                        <Nav.Link to="cart" as={NavLink} className="udlinks">
                             Cart
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link to="products" as={NavLink}>
+                        <Nav.Link to="products" as={NavLink} className="udlinks">
                             Products
                         </Nav.Link>
                     </Nav.Item>
