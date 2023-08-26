@@ -12,17 +12,6 @@ productApp.get('/getproducts', expressAsyncHandler(async (req, res) => {
     res.send({ message: 'All products', payload: products });
 }))
 
-// productApp.put('/putproducts/:id', expressAsyncHandler(async (req, res) => {
-//     let productCollectionObject = req.app.get('productCollectionObj');
-//     let id = +req.params.id;
-//     let updatedProd = req.body;
-//     await productCollectionObject.updateOne(
-//         { "id": id },
-//         { $set: { "name": updatedProd.name , "runs": updatedProd.runs} }
-//     );
-//         res.send({ message: 'Updated Successfully'});
-// }))
-
 productApp.post('/createproducts', expressAsyncHandler(async (req, res) => {
     let newProduct = req.body;
     let productCollectionObj = req.app.get('productCollectionObj');

@@ -79,7 +79,7 @@ function Signup() {
                     {errors.photo && <p className='text-danger'>* Photo is required</p>}
                 </Form.Group>
 
-                <div className="text-center mb-3"><Button className="w-50 mx-auto" variant='success' type='submit'>
+                <div className="text-center mb-3"><Button className="w-50 mx-auto mb-3" variant='success' type='submit'>
                     Signup <SlLogin />
                 </Button></div>
             </Form></Col>

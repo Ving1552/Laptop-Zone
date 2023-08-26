@@ -14,7 +14,7 @@ function Explore() {
                 <Carousel.Item>
                     <Container className='mt-5 mb-3'>
                         <Row>
-                            <Col style={{ marginTop: '7rem' , marginLeft: '10rem'}}><Row><h1>Best Sellers</h1></Row>
+                            <Col style={{ marginTop: '7rem', marginLeft: '10rem' }}><Row><h1>Best Sellers</h1></Row>
                                 <Row><p>Explore our best sellers</p></Row>
                             </Col>
                             <Col><img className="w-75" src={bestsellersimg} alt="" /></Col>
@@ -24,7 +24,7 @@ function Explore() {
                 <Carousel.Item>
                     <Container className='mt-5 mb-5'>
                         <Row>
-                            <Col style={{ marginTop: '7rem' , marginLeft: '10rem'}}><Row><h1>For Work</h1></Row>
+                            <Col style={{ marginTop: '7rem', marginLeft: '10rem' }}><Row><h1>For Work</h1></Row>
                                 <Row><p>Explore laptops for your work needs</p></Row>
                             </Col>
                             <Col><img className="w-100 mt-3" src={worklaptopimg} alt="" /></Col>
@@ -34,7 +34,7 @@ function Explore() {
                 <Carousel.Item>
                     <Container className='mt-5'>
                         <Row>
-                            <Col style={{ marginTop: '7rem' , marginLeft: '10rem'}}><Row><h1>For Students</h1></Row>
+                            <Col style={{ marginTop: '7rem', marginLeft: '10rem' }}><Row><h1>For Students</h1></Row>
                                 <Row><p>Discover laptops for students</p></Row>
                             </Col>
                             <Col><img className="w-75 mt-1" src={studentlaptopimg} alt="" /></Col>
@@ -44,7 +44,7 @@ function Explore() {
                 <Carousel.Item>
                     <Container className='mt-5 mb-5'>
                         <Row>
-                            <Col style={{ marginTop: '7rem' , marginLeft: '10rem'}}><Row><h1>For Gaming</h1></Row>
+                            <Col style={{ marginTop: '7rem', marginLeft: '10rem' }}><Row><h1>For Gaming</h1></Row>
                                 <Row><p>Find gaming essentials</p></Row>
                             </Col>
                             <Col><img className="w-100 mt-3" src={gaminglaptopimg} alt="" /></Col>
