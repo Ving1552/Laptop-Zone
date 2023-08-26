@@ -5,11 +5,14 @@ import { Nav } from "react-bootstrap";
 import './UserDashboard.css'
 
 function Userdashboard() {
-    let { userObj } = useSelector((state) => state.user)
+    let { userObj ,isSuccess} = useSelector((state) => state.user)
 
     return (
         <>
-            <Nav className="justify-content-center mt-3" defaultActiveKey = "/profile">
+        { isSuccess === true ? 
+        (
+        <>
+        <Nav className="justify-content-center mt-3" defaultActiveKey = "/profile">
                     <Nav.Item>
                         <Nav.Link to="profile" as={NavLink} className="udlinks">User Profile</Nav.Link>
                     </Nav.Item>
@@ -27,6 +30,12 @@ function Userdashboard() {
             <div className="mt-3">
                 <Outlet />
             </div>
+        </>) 
+        : 
+        (<>
+        <h1 className="mt-5 text-center">Please Login Again</h1>
+        </>)
+        }
         </>
     )
 }

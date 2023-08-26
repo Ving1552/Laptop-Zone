@@ -32,9 +32,7 @@ const cloudinaryStorage = new CloudinaryStorage({
 //configure multer
 var upload = multer({ storage: cloudinaryStorage })
 
-
 userApp.use(express.json());
-
 
 //Route for user registration
 
@@ -55,8 +53,6 @@ userApp.post('/createusers', upload.single("photo"),  expressAsyncHandler(async 
         newUser.password = hashedPassword;
         //add profile image to new user object
         newUser.profileImg = req.file.path;
-
-        
 
         await userCollectionObj.insertOne(newUser);
 
@@ -86,7 +82,7 @@ userApp.post('/login', expressAsyncHandler(async (req, res) => {
         }
         else {
             //we have to create json web token for valid user
-            let token = jwt.sign({ username: userofDB.username }, process.env.SECRET_KEY, { expiresIn: 100 });
+            let token = jwt.sign({ username: userofDB.username }, process.env.SECRET_KEY, { expiresIn: 1000 });
 
             res.send({ message: 'success', payload: token, userObj: userofDB });
         }
@@ -98,7 +94,7 @@ userApp.get('/getusers', verifyToken, expressAsyncHandler(async (req, res) => {
     let userCollectionObject = req.app.get('userCollectionObj');
     let users = await userCollectionObject.find().toArray();
 
-    res.send({ message: 'All users', payload: users });
+    res.send({ message: 'All users', payload: users }); 
 })
 )
 
@@ -114,7 +110,7 @@ userApp.put('/putusers/:username', expressAsyncHandler(async (req, res) => {
     else {
         await userCollectionObject.updateOne(
             { "username": username },
-            { $set: { "email": updatedUser.email } }
+            { $set: { "address": updatedUser.address } }
         );
         res.send({ message: 'Updated Successfully' });
     }
@@ -133,10 +129,5 @@ userApp.delete('/deleteusers/:username', expressAsyncHandler(async (req, res) =>
         res.send({ message: 'Deleted Successfully' });
     }
 }));
-
-//private routes demo
-userApp.get('/test',verifyToken,(req, res) => {
-    res.send({ message: 'Testing private route'});
-});
 
 module.exports = userApp;

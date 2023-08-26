@@ -28,6 +28,10 @@ function Header() {
     navigate('/login');
   }
 
+  const goToUserDashboard = () => {
+    navigate('/Userdashboard');
+  }
+
   return (
     <div>
       <Navbar collapseOnSelect expand="sm" bg="dark" data-bs-theme="dark">
@@ -35,29 +39,29 @@ function Header() {
           <NavLink className='nav-link' to="/"><h3 style={{ color: 'white' }}>LaptopZone</h3></NavLink>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="nav-elements">
-            {isSuccess !== true ? (
-              <>
-                <NavLink className='nav-link' to="/" >Home</NavLink>
-                <NavLink className='nav-link' to="/signup">Signup</NavLink>
-                <NavLink className='nav-link' to="/login">Login</NavLink>
-                <NavLink className='nav-link' to="/explore">Explore</NavLink>
-              </>
-            ) : (
+            <Nav className="nav-elements">
+              {isSuccess !== true ? (
+                <>
+                  <NavLink className='nav-link' to="/" >Home</NavLink>
+                  <NavLink className='nav-link' to="/signup">Signup</NavLink>
+                  <NavLink className='nav-link' to="/login">Login</NavLink>
+                  <NavLink className='nav-link' to="/explore">Explore</NavLink>
+                </>
+              ) : (
 
-              <>
-                <NavDropdown title={userObj.username.substring(0).toUpperCase()}{...userObj.username.substring(1)}
-                  id="collapsible-nav-dropdown" className='text-primary'
-                >
-                  <NavDropdown.Item>Change Password</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item onClick={userLogout}>Logout
-                  </NavDropdown.Item>
-                </NavDropdown>
-                <img className = "user-img" src={userObj.profileImg}></img>
-              </>
-            )}
-          </Nav>
+                <>
+                  <NavDropdown title={userObj.username.substring(0).toUpperCase()}{...userObj.username.substring(1)}
+                    id="collapsible-nav-dropdown" className='text-primary'
+                  >
+                    <NavDropdown.Item onClick={goToUserDashboard}>My Dashboard</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item onClick={userLogout}>Logout
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <img className="user-img" src={userObj.profileImg}></img>
+                </>
+              )}
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>

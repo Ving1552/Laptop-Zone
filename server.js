@@ -17,9 +17,11 @@ app.use(express.static(path.join(__dirname, './build')))
 
 const userApp = require('./APIS/userAPI');
 const productApp = require('./APIS/productAPI');
+const cartApp = require('./APIS/cartAPI');
 
 app.use('/product', productApp);
 app.use('/user', userApp);
+app.use('/cart', cartApp);
 
 //dealing with page refresh
 app.use('*', (req, res) => {
@@ -36,10 +38,13 @@ mclient.connect(DBurl)
         //collection object
         let userCollectionObj = dbObj.collection('usercollection');
         let productCollectionObj = dbObj.collection('productcollection');
+        let cartCollectionObj = dbObj.collection('cartcollection');
 
         //sharing collection object to APIs
         app.set('productCollectionObj', productCollectionObj);
         app.set('userCollectionObj', userCollectionObj);
+        app.set('cartCollectionObj', cartCollectionObj);
+        
 
         console.log("DB Connection successful");
     })

@@ -45,9 +45,9 @@ function Signup() {
         <div>
             <Container style={{marginTop:'3rem'}}>
                 <Row>
-                    <Col><img className='w-75 mx-auto mt-5' src={signupimg}></img></Col>
+                    <Col><img className='w-75 mx-auto' src={signupimg} style={{marginTop: '8rem'}}></img></Col>
                     <Col>
-            <h3 className="text-center mb-5">SignUp</h3>
+            <h3 className="text-center mb-3">SignUp</h3>
             <Form className="w-100 mx-auto" onSubmit={handleSubmit(onFormSubmit)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Username</Form.Label>
@@ -68,12 +68,18 @@ function Signup() {
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Upload Profile Picture</Form.Label>
-                    <Form.Control type="file" placeholder="Upload your profile picture" {...register("photo")} onChange={(event) => onImageSelect(event)}></Form.Control>
-                    {/* {errors.photo && <p className='text-danger'>* Email is required</p>} */}
+                    <Form.Label>Address</Form.Label>
+                    <Form.Control type="text" placeholder="Enter your address" {...register("address", { required: true })}></Form.Control>
+                    {errors.address && <p className='text-danger'>* Address is required</p>}
                 </Form.Group>
 
-                <div className="text-center"><Button className="w-50 mx-auto" variant='success' type='submit'>
+                <Form.Group className="mb-3">
+                    <Form.Label>Upload Profile Picture</Form.Label>
+                    <Form.Control type="file" placeholder="Upload your profile picture" {...register("photo", { required: true })} onChange={(event) => onImageSelect(event)}></Form.Control>
+                    {errors.photo && <p className='text-danger'>* Photo is required</p>}
+                </Form.Group>
+
+                <div className="text-center mb-3"><Button className="w-50 mx-auto" variant='success' type='submit'>
                     Signup <SlLogin />
                 </Button></div>
             </Form></Col>
