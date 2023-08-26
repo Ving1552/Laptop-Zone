@@ -1,3 +1,5 @@
+![image](https://github.com/Ving1552/Laptop-Zone/assets/101448725/fb546637-7248-43ce-91d4-87e6cd836552)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
