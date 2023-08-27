@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a7d6753a.css",
+    "main.js": "/static/js/main.8560f8d8.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/gaminglaptopimg.svg": "/static/media/gaminglaptopimg.8210c0889b54e53a4c2d704b6586616c.svg",
+    "static/media/studentlaptopimg.svg": "/static/media/studentlaptopimg.28c1f277b477320610e80388e2c2c7d0.svg",
+    "static/media/bestsellersimg.svg": "/static/media/bestsellersimg.5a22eccb83f6f09dfc77e9a0d1aa849d.svg",
+    "static/media/emptycart.svg": "/static/media/emptycart.b5055e56282bba2de480b7282277f3f9.svg",
+    "static/media/homeimg.svg": "/static/media/homeimg.5463425d5b5b08b6dffc266bbd805012.svg",
+    "static/media/loginimg.svg": "/static/media/loginimg.79872296556418253ca4b3289f856112.svg",
+    "static/media/worklaptopimg.svg": "/static/media/worklaptopimg.344c5a1ec4cfd5b50d3b5f6fab7af2eb.svg",
+    "static/media/signupimg.svg": "/static/media/signupimg.c052777033ac1d587b24f7d62fa24504.svg",
+    "index.html": "/index.html",
+    "main.a7d6753a.css.map": "/static/css/main.a7d6753a.css.map",
+    "main.8560f8d8.js.map": "/static/js/main.8560f8d8.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7d6753a.css",
+    "static/js/main.8560f8d8.js"
+  ]
+}
