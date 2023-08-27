@@ -29,7 +29,7 @@ function Signup() {
         formData.append("userObj", JSON.stringify(userObj));
         formData.append("photo", img);
         //http post request
-        axios.post('http://localhost:4000/user/createusers', formData)
+        axios.post('https://laptopzone.onrender.com/user/createusers', formData)
             .then(response => {
                 alert(response.data.message);
                 //if user created successfully navigate to login as user

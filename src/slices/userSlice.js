@@ -3,7 +3,7 @@ import axios from 'axios';
 
 //make HTTP POST req to login user
 export const userLogin = createAsyncThunk('loginuser', async (userCredentialObj, thunkApi) => {
-    let response = await axios.post('http://localhost:4000/user/login', userCredentialObj);
+    let response = await axios.post('https://laptopzone.onrender.com/user/login', userCredentialObj);
     let data = response.data;
     if (data.message === 'success') {
         //store token in local storage

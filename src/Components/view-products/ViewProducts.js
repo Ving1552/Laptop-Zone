@@ -10,7 +10,7 @@ function ViewProducts() {
   useEffect(() => {
     const fetchData = async () => {
       //http get request
-      const data = await axios.get('http://localhost:4000/product/getproducts');
+      const data = await axios.get('https://laptopzone.onrender.com/product/getproducts');
       setProducts(data);
     };
     fetchData();
